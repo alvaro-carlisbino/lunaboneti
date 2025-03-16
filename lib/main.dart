@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:luna/colors.dart';
@@ -21,7 +22,6 @@ class _MainAppState extends State<MainApp> {
   bool isHoverThreeButton = false;
   bool isHoverFourButton = false;
   bool isHoverFiveButton = false;
-
 
   @override
   Widget build(BuildContext context) {
@@ -241,6 +241,57 @@ class _MainAppState extends State<MainApp> {
                             color: Colors.white,
                           ),
                         ),
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      margin: EdgeInsets.only(top: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: 10,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.SocialMediaIcons,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.instagram),
+                              onPressed: () {},
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.SocialMediaIcons,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.linkedin),
+                              onPressed: () {},
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.SocialMediaIcons,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.tiktok),
+                              onPressed: () {},
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.SocialMediaIcons,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.pinterest),
+                              onPressed: () {},
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
