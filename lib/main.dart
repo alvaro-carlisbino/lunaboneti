@@ -84,7 +84,7 @@ class _MainAppState extends State<MainApp> {
                                 ? AppColors.firstColumnButtons
                                 : AppColors.firstColumnButtonsHover,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.white, width: 1),
+                        border: Border.all(color: Colors.black, width: 1),
                       ),
                       width: double.infinity,
                       padding: EdgeInsets.all(8),
@@ -94,7 +94,7 @@ class _MainAppState extends State<MainApp> {
                           textStyle: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
                             fontWeight: FontWeight.normal,
-                            color: Colors.white,
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -120,7 +120,7 @@ class _MainAppState extends State<MainApp> {
                                 ? AppColors.firstColumnButtons
                                 : AppColors.firstColumnButtonsHover,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.white, width: 1),
+                        border: Border.all(color: Colors.black, width: 1),
                       ),
                       width: double.infinity,
                       padding: EdgeInsets.all(8),
@@ -130,7 +130,7 @@ class _MainAppState extends State<MainApp> {
                           textStyle: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
                             fontWeight: FontWeight.normal,
-                            color: Colors.white,
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -156,7 +156,7 @@ class _MainAppState extends State<MainApp> {
                                 ? AppColors.firstColumnButtons
                                 : AppColors.firstColumnButtonsHover,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.white, width: 1),
+                        border: Border.all(color: Colors.black, width: 1),
                       ),
                       width: double.infinity,
                       padding: EdgeInsets.all(8),
@@ -166,7 +166,7 @@ class _MainAppState extends State<MainApp> {
                           textStyle: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
                             fontWeight: FontWeight.normal,
-                            color: Colors.white,
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -192,7 +192,7 @@ class _MainAppState extends State<MainApp> {
                                 ? AppColors.firstColumnButtons
                                 : AppColors.firstColumnButtonsHover,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.white, width: 1),
+                        border: Border.all(color: Colors.black, width: 1),
                       ),
                       width: double.infinity,
                       padding: EdgeInsets.all(8),
@@ -202,7 +202,7 @@ class _MainAppState extends State<MainApp> {
                           textStyle: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
                             fontWeight: FontWeight.normal,
-                            color: Colors.white,
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -228,7 +228,7 @@ class _MainAppState extends State<MainApp> {
                                 ? AppColors.firstColumnButtons
                                 : AppColors.firstColumnButtonsHover,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.white, width: 1),
+                        border: Border.all(color: Colors.black, width: 1),
                       ),
                       width: double.infinity,
                       padding: EdgeInsets.all(8),
@@ -238,7 +238,7 @@ class _MainAppState extends State<MainApp> {
                           textStyle: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
                             fontWeight: FontWeight.normal,
-                            color: Colors.white,
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -248,54 +248,53 @@ class _MainAppState extends State<MainApp> {
                     child: Padding(
                       padding: const EdgeInsets.all(10),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          spacing: 5,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                color: AppColors.SocialMediaIcons,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: IconButton(
-                                icon: FaIcon(FontAwesomeIcons.instagram),
-                                onPressed: () {},
-                              ),
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: 5,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.SocialMediaIcons,
+                              borderRadius: BorderRadius.circular(50),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: AppColors.SocialMediaIcons,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: IconButton(
-                                icon: FaIcon(FontAwesomeIcons.linkedin),
-                                onPressed: () {},
-                              ),
+                            child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.instagram),
+                              onPressed: () {},
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: AppColors.SocialMediaIcons,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: IconButton(
-                                icon: FaIcon(FontAwesomeIcons.tiktok),
-                                onPressed: () {},
-                              ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.SocialMediaIcons,
+                              borderRadius: BorderRadius.circular(50),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: AppColors.SocialMediaIcons,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: IconButton(
-                                icon: FaIcon(FontAwesomeIcons.pinterest),
-                                onPressed: () {},
-                              ),
+                            child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.linkedin),
+                              onPressed: () {},
                             ),
-                          ],
-                        ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.SocialMediaIcons,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.tiktok),
+                              onPressed: () {},
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.SocialMediaIcons,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.pinterest),
+                              onPressed: () {},
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    ),
-                  
+                  ),
                 ],
               ),
             ),
