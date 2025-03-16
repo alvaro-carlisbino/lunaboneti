@@ -245,56 +245,57 @@ class _MainAppState extends State<MainApp> {
                     ),
                   ),
                   Center(
-                    child: Container(
-                      margin: EdgeInsets.only(top: 25),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        spacing: 10,
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              color: AppColors.SocialMediaIcons,
-                              borderRadius: BorderRadius.circular(50),
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          spacing: 5,
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                color: AppColors.SocialMediaIcons,
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: IconButton(
+                                icon: FaIcon(FontAwesomeIcons.instagram),
+                                onPressed: () {},
+                              ),
                             ),
-                            child: IconButton(
-                              icon: FaIcon(FontAwesomeIcons.instagram),
-                              onPressed: () {},
+                            Container(
+                              decoration: BoxDecoration(
+                                color: AppColors.SocialMediaIcons,
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: IconButton(
+                                icon: FaIcon(FontAwesomeIcons.linkedin),
+                                onPressed: () {},
+                              ),
                             ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: AppColors.SocialMediaIcons,
-                              borderRadius: BorderRadius.circular(50),
+                            Container(
+                              decoration: BoxDecoration(
+                                color: AppColors.SocialMediaIcons,
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: IconButton(
+                                icon: FaIcon(FontAwesomeIcons.tiktok),
+                                onPressed: () {},
+                              ),
                             ),
-                            child: IconButton(
-                              icon: FaIcon(FontAwesomeIcons.linkedin),
-                              onPressed: () {},
+                            Container(
+                              decoration: BoxDecoration(
+                                color: AppColors.SocialMediaIcons,
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: IconButton(
+                                icon: FaIcon(FontAwesomeIcons.pinterest),
+                                onPressed: () {},
+                              ),
                             ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: AppColors.SocialMediaIcons,
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            child: IconButton(
-                              icon: FaIcon(FontAwesomeIcons.tiktok),
-                              onPressed: () {},
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: AppColors.SocialMediaIcons,
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            child: IconButton(
-                              icon: FaIcon(FontAwesomeIcons.pinterest),
-                              onPressed: () {},
-                            ),
-                          ),
-                        ],
-                      ),
+                          ],
+                        ),
                     ),
-                  ),
+                    ),
+                  
                 ],
               ),
             ),
