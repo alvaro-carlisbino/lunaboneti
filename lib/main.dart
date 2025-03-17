@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:luna/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MainApp());
@@ -23,6 +24,16 @@ class _MainAppState extends State<MainApp> {
   bool isHoverFourButton = false;
   bool isHoverFiveButton = false;
 
+  final String url = "https://alvaro-carlisbino.vercel.app/";
+
+  _launchURL() async {
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
+    } else {
+      throw 'Não foi possível abrir o link';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -32,7 +43,7 @@ class _MainAppState extends State<MainApp> {
           children: [
             Container(
               alignment: Alignment.center,
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height - 64,
               width: double.infinity,
               color: AppColors.firstColumnColor,
               child: Column(
@@ -53,7 +64,7 @@ class _MainAppState extends State<MainApp> {
                   Container(
                     margin: EdgeInsets.only(top: 10),
                     child: Text(
-                      "Creator, publicitária e empreendedora",
+                      "Te faço questionar sua vida para mudar padrões que te deixam empacado.",
                       style: GoogleFonts.poppins(
                         textStyle: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.015,
@@ -76,20 +87,20 @@ class _MainAppState extends State<MainApp> {
                       });
                     },
                     child: Container(
-                      margin: EdgeInsets.only(top: 25, left: 20, right: 20),
+                      margin: EdgeInsets.only(top: 10, left: 20, right: 20),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color:
                             isHoverFirstButton == false
                                 ? AppColors.firstColumnButtons
                                 : AppColors.firstColumnButtonsHover,
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(100),
                         border: Border.all(color: Colors.black, width: 1),
                       ),
                       width: double.infinity,
                       padding: EdgeInsets.all(8),
                       child: Text(
-                        "Cursos e mt top legal de mais",
+                        "Quero saber mais sobre a moto elétrica",
                         style: GoogleFonts.roboto(
                           textStyle: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
@@ -112,20 +123,20 @@ class _MainAppState extends State<MainApp> {
                       });
                     },
                     child: Container(
-                      margin: EdgeInsets.only(top: 25, left: 20, right: 20),
+                      margin: EdgeInsets.only(top: 10, left: 20, right: 20),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color:
                             isHoverTwoButton == false
                                 ? AppColors.firstColumnButtons
                                 : AppColors.firstColumnButtonsHover,
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(100),
                         border: Border.all(color: Colors.black, width: 1),
                       ),
                       width: double.infinity,
                       padding: EdgeInsets.all(8),
                       child: Text(
-                        "Cursos e mt top legal de mais",
+                        "Meus itens diários",
                         style: GoogleFonts.roboto(
                           textStyle: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
@@ -148,20 +159,20 @@ class _MainAppState extends State<MainApp> {
                       });
                     },
                     child: Container(
-                      margin: EdgeInsets.only(top: 25, left: 20, right: 20),
+                      margin: EdgeInsets.only(top: 10, left: 20, right: 20),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color:
                             isHoverThreeButton == false
                                 ? AppColors.firstColumnButtons
                                 : AppColors.firstColumnButtonsHover,
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(100),
                         border: Border.all(color: Colors.black, width: 1),
                       ),
                       width: double.infinity,
                       padding: EdgeInsets.all(8),
                       child: Text(
-                        "Cursos e mt top legal de mais",
+                        "Vídeo novo no canal",
                         style: GoogleFonts.roboto(
                           textStyle: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
@@ -184,20 +195,20 @@ class _MainAppState extends State<MainApp> {
                       });
                     },
                     child: Container(
-                      margin: EdgeInsets.only(top: 25, left: 20, right: 20),
+                      margin: EdgeInsets.only(top: 10, left: 20, right: 20),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         color:
                             isHoverFourButton == false
                                 ? AppColors.firstColumnButtons
                                 : AppColors.firstColumnButtonsHover,
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(100),
                         border: Border.all(color: Colors.black, width: 1),
                       ),
                       width: double.infinity,
                       padding: EdgeInsets.all(8),
                       child: Text(
-                        "Cursos e mt top legal de mais",
+                        "Meu PodCast",
                         style: GoogleFonts.roboto(
                           textStyle: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
@@ -208,42 +219,7 @@ class _MainAppState extends State<MainApp> {
                       ),
                     ),
                   ),
-                  MouseRegion(
-                    onEnter: (event) {
-                      setState(() {
-                        isHoverFiveButton = true;
-                      });
-                    },
-                    onExit: (event) {
-                      setState(() {
-                        isHoverFiveButton = false;
-                      });
-                    },
-                    child: Container(
-                      margin: EdgeInsets.only(top: 25, left: 20, right: 20),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color:
-                            isHoverFiveButton == false
-                                ? AppColors.firstColumnButtons
-                                : AppColors.firstColumnButtonsHover,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.black, width: 1),
-                      ),
-                      width: double.infinity,
-                      padding: EdgeInsets.all(8),
-                      child: Text(
-                        "Cursos e mt top legal de mais",
-                        style: GoogleFonts.roboto(
-                          textStyle: TextStyle(
-                            fontSize: MediaQuery.of(context).size.height * 0.02,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+
                   Center(
                     child: Padding(
                       padding: const EdgeInsets.all(10),
@@ -261,16 +237,7 @@ class _MainAppState extends State<MainApp> {
                               onPressed: () {},
                             ),
                           ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: AppColors.SocialMediaIcons,
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            child: IconButton(
-                              icon: FaIcon(FontAwesomeIcons.linkedin),
-                              onPressed: () {},
-                            ),
-                          ),
+
                           Container(
                             decoration: BoxDecoration(
                               color: AppColors.SocialMediaIcons,
@@ -287,7 +254,7 @@ class _MainAppState extends State<MainApp> {
                               borderRadius: BorderRadius.circular(50),
                             ),
                             child: IconButton(
-                              icon: FaIcon(FontAwesomeIcons.pinterest),
+                              icon: FaIcon(FontAwesomeIcons.youtube),
                               onPressed: () {},
                             ),
                           ),
@@ -296,6 +263,41 @@ class _MainAppState extends State<MainApp> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(16),
+              width: double.infinity,
+              color: Color.fromARGB(255, 56, 56, 56),
+              child: Center(
+                child: TextButton(
+                  onPressed: _launchURL,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Feito com ",
+                        style: GoogleFonts.roboto(
+                          textStyle: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      Icon(Icons.favorite, color: Colors.red),
+                      Text(
+                        " por Alvaro Carlisbino",
+                        style: GoogleFonts.roboto(
+                          textStyle: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
